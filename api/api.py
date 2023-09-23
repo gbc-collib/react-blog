@@ -15,6 +15,7 @@ class Post(db.Model):
     author = db.Column(db.String(100), nullable=False)
     published = db.Column(db.Date, nullable=False)
     content = db.Column(db.Text, nullable=False)
+    thumbnail = db.Column(db.Text, nullable=True)
 #Default /posts methods
 @app.route('/posts', methods=['GET'])
 def get_posts():
@@ -28,7 +29,8 @@ def get_posts():
             'title': post.title,
             'author': post.author,
             'published': post.published.strftime('%Y-%m-%d'),
-            'content': post.content
+            'content': post.content,
+            'thumbnail': post.thumbnail
         }
         posts_data.append(post_data)
 
@@ -37,22 +39,33 @@ def get_posts():
 
 @app.route('/posts', methods=['POST'])
 def create_post():
-    data = request.json
+    try:
+        data = request.json
+    except Exception as error:
+        print(error)
     print(data)
-    post = Post(title=data['title'], content=data['content'])
+    post = Post(title=data['title'], content=data['content'], author=data['author'], thumbnail=data['thumbnail'], published=data['published'])
     print(post)
     db.session.add(post)
     db.session.commit()
     return jsonify({'message': 'Post created successfully'})
 #Methods for posts by ID
-@app.route('/posts/<int:id>', methods=['GET'])
+@app.route('/post/<int:id>', methods=['GET'])
 def get_post(id):
     post = Post.query.get(id)
     if not post:
         return jsonify({'message': 'Post not found'}), 404
-    return jsonify(post.serialize())
+    post_data = {
+        'id': post.id,
+        'title': post.title,
+        'author': post.author,
+        'published': post.published.strftime('%Y-%m-%d'),
+        'content': post.content,
+        'thumbnail': post.thumbnail
+    }
+    return jsonify(post_data), 200
 
-@app.route('/posts/<int:id>', methods=['PUT'])
+@app.route('/post/<int:id>', methods=['PUT'])
 def update_post(id):
     data = request.json
     post = Post.query.get(id)
@@ -63,7 +76,7 @@ def update_post(id):
     db.session.commit()
     return jsonify({'message': 'Post updated successfully'})
 
-@app.route('/posts/<int:id>', methods=['DELETE'])
+@app.route('/post/<int:id>', methods=['DELETE'])
 def delete_post(id):
     post = Post.query.get(id)
     if not post:
