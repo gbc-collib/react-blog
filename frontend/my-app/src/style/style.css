@@ -1,0 +1,50 @@
+body {
+  font-family: sans-serif;
+}
+/* styles.css (or your preferred style file) */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust column width as needed */
+  gap: 20px; /* Adjust the gap between blog posts */
+  justify-items: space-evenly; /* Center content horizontally within each grid item */
+}
+
+.blog-post {
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  background-color: #333333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle box shadow */
+  color: #f0f0f0;
+}
+
+.blog-post h2 {
+  font-size: 1.5rem; /* Example font size for the post title */
+  margin-bottom: 10px; /* Adjust spacing as needed */
+}
+
+.blog-post p {
+
+  font-size: 1rem; /* Example font size for author and date */
+  color: #b3b3b3; /* Text color for author and date */
+}
+
+/* Style the "Read more" link */
+.blog-post a {
+  display: block;
+  margin-top: 10px; /* Add space below the date */
+  text-decoration: none;
+  color: #0077cc; /* Link color */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+.blog-post h2 a {
+    text-decoration: none;
+    color: #f0f0f0;
+}
+
+.blog-post a:hover {
+  color: #005299; /* Link color on hover */
+}
+.thumb-nail img{
+    width:50%;
+}
