@@ -33,14 +33,18 @@ const BlogList: React.FC = () => {
  return (
     <div className="blog-grid">
       {posts.map((post) => (
+      <div className="card">
+      <div className="card-body">
         <div key={post.id} className="blog-post">
-          <h2><Link to={`/post/${post.id}`}>{post.title}</Link></h2>
+          <h2 className="card-title"><Link to={`/blog/${post.id}`}>{post.title}</Link></h2>
           <img className="img-thumbnail" src={post.thumbnail} alt={post.title} />
 
-                    <p>
+                    <p className="card-subtitle mb-2 text-body-secondary">
                     By <span>{post.author}</span> on <span>{formatDate(post.published)}</span>
                     </p>
-          <Link to={`/post/${post.id}`}>Read more</Link>
+          <Link className="strectched-link" to={`/blog/${post.id}`}>Read more</Link>
+          </div>
+          </div>
         </div>
       ))}
     </div>

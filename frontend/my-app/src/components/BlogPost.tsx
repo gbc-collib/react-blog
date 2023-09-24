@@ -29,12 +29,13 @@ const BlogPost: React.FC = () => {
   }
 
   return (
-    <div className="center-block indiviual-blog-post">
+    <div className="indiviual-blog-post">
       <div className="page-header">
           <h1>{post.title}</h1>
      </div>
-      <p><small>By {post.author}</small></p>
       <section><img className="img-thumbnail" src={post.thumbnail}></img></section>
+                    <p className="card-subtitle mb-2 text-body-secondary">
+      <small>By {post.author}</small></p>
       <p>{post.content}</p>
     </div>
   );
