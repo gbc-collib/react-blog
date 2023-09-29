@@ -1,0 +1,26 @@
+.header {
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+}
+.header {
+  font-family: 'Terminal', monospace; /* Use an appropriate monospaced font */
+  white-space: pre; /* Preserve whitespace */
+  color: #32b141; /* Set the text color to white */
+  background-color: #000000; /* Set the background color to black */
+  padding: 20px; /* Add padding for better visibility */
+}
+
+.blink-underscore{
+  position: absolute;
+  animation: blink 0.5s infinite;
+}
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+

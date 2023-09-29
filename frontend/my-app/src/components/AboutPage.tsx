@@ -54,7 +54,7 @@ const AboutPage: React.FC = () => {
                                 Mainly this project serves as an example of everything I've learned working thus far and because I thought it would be cool to host my own blog instead of using medium.
                             </p></div>
                         </div>
-                        <h3 className="accordion-header">
+                        <h3 className="accordion-header terminal">
 
                             <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
                                 OSRS Exchange Tracker</button></h3>
@@ -82,12 +82,10 @@ const AboutPage: React.FC = () => {
 
                 <section>
                     <h2>Education</h2>
-                    <p>
                         <ul>
                             <li> Highschool - Hawken class of 2020 </li>
                             <li>Associates - Tri-c Programming and Development class of 2024</li>
                         </ul>
-                    </p>
                 </section>
                 <section>
                     <h2>Work Experience</h2>

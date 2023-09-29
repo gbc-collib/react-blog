@@ -1,4 +1,5 @@
 import {useState, useEffect} from "react";
+import "../style/bloglist.scss";
 import {Link} from "react-router-dom";
 import axios from "axios"
 
@@ -30,20 +31,20 @@ const BlogList: React.FC = () => {
       setPosts(response.data);
     });
   }, []);
- return (
+    return (
     <div className="blog-grid">
       {posts.map((post) => (
-      <div className="card">
-      <div className="card-body">
-        <div key={post.id} className="blog-post">
-          <h2 className="card-title"><Link to={`/blog/${post.id}`}>{post.title}</Link></h2>
-          <img className="img-thumbnail" src={post.thumbnail} alt={post.title} />
-
-                    <p className="card-subtitle mb-2 text-body-secondary">
-                    By <span>{post.author}</span> on <span>{formatDate(post.published)}</span>
-                    </p>
-          <Link className="strectched-link" to={`/blog/${post.id}`}>Read more</Link>
+        <div className="terminal-card" key={post.id}>
+          <div className="terminal-header">
+            <span>$ Blog Post</span>
           </div>
+          <div className="terminal-content">
+            <h2><Link className="terminal-link" to={`/blog/${post.id}`}>{post.title}</Link></h2>
+            <img className="img-thumbnail" src={post.thumbnail} alt={post.title} />
+            <p>
+              By <span>{post.author}</span> on <span>{formatDate(post.published)}</span>
+            </p>
+            <Link className="terminal-link" to={`/blog/${post.id}`}>Read more</Link>
           </div>
         </div>
       ))}

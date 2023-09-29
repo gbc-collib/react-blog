@@ -1,9 +1,11 @@
 @import '../../node_modules/bootstrap/scss/bootstrap';
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+@import './variables.scss';
 body {
-  font-family: sans-serif;
+  font-family: 'Courier New', monospace;
+  background-color: #000;
+  color: $terminal-font; /* Set the text color to white */
 }
-/* styles.css (or your preferred style file) */
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust column width as needed */
@@ -11,52 +13,24 @@ body {
   justify-items: space-evenly; /* Center content horizontally within each grid item */
 }
 
-.blog-post {
-  padding: 20px;
-  text-align: center;
-background-color: #333333;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle box shadow */
-  color: #f0f0f0;
-    h2 {
-          font-size: 1.5rem;
-          margin-bottom: 10px;
-    }
-    p {
-        font-size: 1rem;
-        color: #b3b3b3;
-    }
-     a {
-      display: block;
-      margin-top: 10px; /* Add space below the date */
-      text-decoration: none;
-      color: #0077cc; /* Link color */
-      transition: color 0.3s ease; /* Smooth color transition on hover */
-    }
-}
-
-/* Style the "Read more" link */
-.blog-post.blog-post h2 a {
-    text-decoration: none;
-    color: #f0f0f0;
-}
-
-.blog-post a:hover {
-  color: #005299; /* Link color on hover */
-}
-.thumb-nail img{
+.center-header-img {
     width:50%;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 h1 {
     text-align: center;
 }
+
 h2 {
     text-align: center;
 }
+
 .individual-blog-post {
     text-align: center;
-    display: flex;
-    justify-content: center;
 }
+
 .about-page {
     margin: 1em 1em 1em;
     left-margin: 5em;
@@ -64,9 +38,14 @@ h2 {
 .contact {
     font-size: 1.5em;
 }
-.linkedin {
-    background-image: url("../../public/resources/linkedin.png");
+
+.nav-link {
+    color: $terminal-font;
 }
-.github {
-    background-image: url("../../public/resources/github.svg");
-}
+
+.active{
+    color: $terminal-font !important;
+    background-color: #000 !important;
+    border: 1px solid $terminal-font;
+    }
+

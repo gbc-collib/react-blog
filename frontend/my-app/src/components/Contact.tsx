@@ -1,4 +1,6 @@
 import React from 'react';
+import '../style/contact.scss'; // Make sure to import your CSS file
+
 const ContactPage: React.FC = () => {
   return (
     <div className="contact-page">
@@ -11,10 +13,16 @@ const ContactPage: React.FC = () => {
       </p>
 
       <h2>Contact Information</h2>
-      <ul className="list-group contact">
-        <li className="list-group-item"><i className="bi bi-mailbox"></i> Email: CollinStasiak@gmail.com</li>
-        <li className="list-group-item"><i className="bi bi-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/collin-stasiak-2b0529262" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></li>
-        <li className="list-group-item"><i className="bi bi-github"></i> Github: <a href="https://github.com/gbc-collib"> Gbc-Collib</a></li>
+      <ul className="custom-list contact">
+        <li className="custom-list-item">
+          <i className="bi bi-mailbox"></i> Email: CollinStasiak@gmail.com
+        </li>
+        <li className="custom-list-item">
+          <i className="bi bi-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/collin-stasiak-2b0529262" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+        </li>
+        <li className="custom-list-item">
+          <i className="bi bi-github"></i> Github: <a href="https://github.com/gbc-collib"> Gbc-Collib</a>
+        </li>
       </ul>
     </div>
   );

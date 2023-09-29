@@ -1,0 +1,47 @@
+@import './variables.scss';
+.terminal-card {
+  font-family: 'Courier New', monospace;
+  color: $terminal-font; /* Green text color */
+  background-color: #000; /* Black background */
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #00ff00; /* Bright green color for the border */
+  border-radius: 5px;
+
+
+    .terminal-header {
+      border-bottom: 1px solid #00ff00; /* Bright green color for the border */
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+
+
+        span {
+          color: $terminal-font; /* Bright green color for the header text */
+        }
+    }
+
+    .terminal-content {
+        h2 {
+          color: #ffff00; /* Yellow color for the blog post title */
+          text-decoration: none;
+        }
+
+        img {
+          border: 1px solid #00ff00; /* Bright green color for the image border */
+          margin-bottom: 10px;
+        }
+
+        p {
+          margin-bottom: 10px;
+        }
+
+        .terminal-link {
+          text-decoration: none;
+          color: $terminal-font;
+        }
+
+        :hover {
+          text-decoration: underline;
+        }
+    }
+}

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Route, useParams } from "react-router-dom";
+import  Markdown  from "react-markdown";
 
 type Post ={
   id: number;
@@ -29,15 +30,17 @@ const BlogPost: React.FC = () => {
   }
 
   return (
-    <div className="indiviual-blog-post">
+  <section>
+    <div className="individual-blog-post">
       <div className="page-header">
           <h1>{post.title}</h1>
      </div>
-      <section><img className="img-thumbnail" src={post.thumbnail}></img></section>
-                    <p className="card-subtitle mb-2 text-body-secondary">
+      <img className="img-thumbnail center-header-img mx-auto d-block" src={post.thumbnail}/>
+                    <p className="text-body-secondary">
       <small>By {post.author}</small></p>
-      <p>{post.content}</p>
+      <Markdown>{post.content}</Markdown>
     </div>
+    </section>
   );
 };
 export default BlogPost

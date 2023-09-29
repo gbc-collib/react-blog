@@ -1,0 +1,41 @@
+.contact-info {
+  font-family: 'Courier New', monospace;
+  color: #8aff8a; /* Green text color */
+  background-color: #000; /* Black background */
+  padding: 20px;
+}
+
+
+.contact-page {
+  font-family: 'Courier New', monospace;
+  color: #32b141; /* Set the text color to white */
+  background-color: #000; /* Black background */
+  padding: 20px;
+}
+
+h1 {
+  color: #32b141; /* Set the text color to white */
+}
+
+.custom-list {
+  list-style: none;
+  padding: 0;
+}
+
+.custom-list-item {
+  border-top: 1px solid #00ff00; /* Bright green color for the border */
+  padding: 10px;
+}
+.ascii-border::after{
+    content: " ";
+}
+
+.custom-list-item a {
+  color: #32b141; /* Set the text color to white */
+  text-decoration: none;
+}
+
+.custom-list-item a:hover {
+  text-decoration: underline;
+}
+
