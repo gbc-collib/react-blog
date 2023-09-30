@@ -1,0 +1,17 @@
+@import './variables.scss';
+.accordion-header-terminal {
+    color: $terminal-font;
+    border: 1px solid $terminal-font; /* Bright green border color */
+    border-radius: 5px;
+    cursor: pointer;
+    padding-left: 40px;
+    transition: background-color 0.3s ease;
+    :before {
+        content: '□'; /* Unicode character for a square */
+        position: absolute;
+        left: 30px; /* Adjust as needed */
+    }
+}
+.terminal-link {
+    color: $terminal-font;
+}

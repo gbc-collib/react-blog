@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import "../style/aboutpage.scss";
 
 const AboutPage: React.FC = () => {
     $(function() {
@@ -53,7 +54,7 @@ const AboutPage: React.FC = () => {
                                 Mainly this project serves as an example of everything I've learned working thus far and because I thought it would be cool to host my own blog instead of using medium.
                             </p></div>
                         </div>
-                        <h3 className="accordion-header terminal">
+                        <h3 className="accordion-header-terminal">
                                 OSRS Exchange Tracker</h3>
                         <div id="collaspeTwo" className="">
                             <div className="accordion-body-terminal">
@@ -64,7 +65,7 @@ const AboutPage: React.FC = () => {
                                     After taking a class on SQL in my time at TRI-C the answer smacked me in the face and I scrapped the clunky json storage method I had been using and replaced it with a proper database,
                                     normalized to the third form which allowed querying to be made much simpler I just made a table key'd by the combination of a parent and it's child. Querying children would just mean finding every instance of the parent object in that table.
                                 </p></div></div>
-                        <h3 className="accordion-header">
+                        <h3 className="accordion-header-terminal">
                                 C# Audio Processing Library</h3>
                         <div className="accordion-collaspe collaspe" id="collaspeThree"><div className="accordion-body">
                             <p>I decided to mess around with C# after I was forced to use it in school and I probably won't be returning to it anytime soon
@@ -92,7 +93,7 @@ const AboutPage: React.FC = () => {
                     </ul>
                 </section>
 
-                <h2><Link to="/contact/">Contact Me</Link></h2>
+                <h2><Link className="terminal-link" to="/contact/">Contact Me</Link></h2>
             </div >
         </main>
     );

@@ -15,7 +15,7 @@ const App: React.FC = () => {
     <Navbar/>
     <Header/>
       <Routes>
-      <Route path="/blog" element={<BlogList />} />
+      <Route path="/" element={<BlogList />} />
         <Route path="/blog/:id" element={<BlogPost />} />
       <Route path="/contact" element={<ContactPage/>} />
       <Route path="/about" element={<AboutPage/>} />

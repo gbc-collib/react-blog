@@ -25,8 +25,9 @@ const BlogPost: React.FC = () => {
       });
   }, [id]);
 
+  console.log(post);
   if (!post) {
-    return <div>Loading...</div>;
+    return <div><p>Loading...</p></div>;
   }
 
   return (

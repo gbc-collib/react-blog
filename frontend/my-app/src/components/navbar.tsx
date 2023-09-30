@@ -10,7 +10,6 @@ const Navbar = (): React.ReactElement => {
     <nav className="">
       <ul className="nav nav-pills nav-justified">
         <li><Link to="/" className={"nav-link" + (url === "/" ?" active" : "")}>Home</Link></li>
-        <li><Link to="/blog/" className={"nav-link"+ (url === "/blog/" ? " active" : "")}>Blog</Link></li>
         <li><Link to="/contact/" className={"nav-link" + (url === "/contact/" ? " active" : "")}>Contact</Link></li>
         <li><Link to="/about/" className={"nav-link" + (url === "/about/" ? " active" : "")}>About</Link></li>
       </ul>
