@@ -15,3 +15,7 @@
 .terminal-link {
     color: $terminal-font;
 }
+.accordion-body-terminal {
+     max-height: 200px; // Adjust the height according to your design
+    overflow-y: auto;
+  }

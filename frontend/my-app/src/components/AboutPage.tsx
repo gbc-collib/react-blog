@@ -67,7 +67,7 @@ const AboutPage: React.FC = () => {
                                 </p></div></div>
                         <h3 className="accordion-header-terminal">
                                 C# Audio Processing Library</h3>
-                        <div className="accordion-collaspe collaspe" id="collaspeThree"><div className="accordion-body">
+                        <div className="accordion-collaspe collaspe" id="collaspeThree"><div className="accordion-body-terminal">
                             <p>I decided to mess around with C# after I was forced to use it in school and I probably won't be returning to it anytime soon
                                 atleast not for personal projects, but it did help me demonstrate and apply a solid(see what I did there) understanding of Object Oriented Programmming principles
                                 My first learning objective with this project was just to learn how to process raw bytes to format them into different audio file types. I began with converting 16bit .wavs to 32 and 64 bit.
