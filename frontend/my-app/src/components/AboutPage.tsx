@@ -44,22 +44,19 @@ const AboutPage: React.FC = () => {
                         I have worked on a variety of personal projects during my journey, including:
                     </p>
                     <div className="accordion">
-                        <h3 className="accordion-header">
-                            <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                This blog!</button></h3>
-                        <div id="collapseOne" className="accordion-collapse collapse show">
-                            <div className="accordion-body"><p>This site is built with Typescript and react for the frontend, and was actually my introduction to react as I use angular for my current job.
+                        <h3 className="accordion-header-terminal">
+                                This blog!</h3>
+                        <div id="collapseOne" className="">
+                            <div className="accordion-body-terminal"><p>This site is built with Typescript and react for the frontend, and was actually my introduction to react as I use angular for my current job.
                                 The backend uses Python's Flask library because sometimes simple is just better. While probably not necessary for a project of this size, I implemented a CMS (Content Management System)
                                 using sqlite as my database engine. The flask server encapsulates all of the database logic and exposes some API routes to allow the front-end to grab data for blog posts.
                                 Mainly this project serves as an example of everything I've learned working thus far and because I thought it would be cool to host my own blog instead of using medium.
                             </p></div>
                         </div>
                         <h3 className="accordion-header terminal">
-
-                            <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
-                                OSRS Exchange Tracker</button></h3>
-                        <div id="collaspeTwo" className="accordion-collaspe collaspe">
-                            <div className="accordion-body">
+                                OSRS Exchange Tracker</h3>
+                        <div id="collaspeTwo" className="">
+                            <div className="accordion-body-terminal">
                                 <p>Another website this time using Python's Django library along with a postgre database.
 
                                     One challenge I faced here was that I had never built my own database before this project and I was struggling to come up with a solution to store,
@@ -68,8 +65,7 @@ const AboutPage: React.FC = () => {
                                     normalized to the third form which allowed querying to be made much simpler I just made a table key'd by the combination of a parent and it's child. Querying children would just mean finding every instance of the parent object in that table.
                                 </p></div></div>
                         <h3 className="accordion-header">
-                            <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
-                                C# Audio Processing Library</button></h3>
+                                C# Audio Processing Library</h3>
                         <div className="accordion-collaspe collaspe" id="collaspeThree"><div className="accordion-body">
                             <p>I decided to mess around with C# after I was forced to use it in school and I probably won't be returning to it anytime soon
                                 atleast not for personal projects, but it did help me demonstrate and apply a solid(see what I did there) understanding of Object Oriented Programmming principles

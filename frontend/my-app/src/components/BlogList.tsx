@@ -27,7 +27,6 @@ const BlogList: React.FC = () => {
 
   useEffect(() => {
     axios.get("http://localhost:5000/posts").then((response) => {
-        console.log(response.data);
       setPosts(response.data);
     });
   }, []);
