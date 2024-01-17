@@ -2,6 +2,7 @@ import {useState, useEffect} from "react";
 import "../style/bloglist.scss";
 import {Link} from "react-router-dom";
 import axios from "axios"
+const API = "https://dfvoxbjo2c.execute-api.us-east-1.amazonaws.com/Prod/"
 
 interface Post {
   id: number;
@@ -26,10 +27,14 @@ const BlogList: React.FC = () => {
   const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/posts").then((response) => {
+    axios.get(`${API}`, {"headers":{'x-api-key':apiKey, "Content-Type":"application/json"}})
+    .then((response) => {
       setPosts(response.data);
     });
   }, []);
+  if(!posts){
+    return <div><p>Loading...</p></div>;
+  }
     return (
     <div className="blog-grid">
       {posts.map((post) => (

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@aws-sdk/client-api-gateway": "^3.425.0",
+    "@aws-sdk/client-lambda": "^3.423.0"
+  }
+}

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Route, useParams } from "react-router-dom";
 import  Markdown  from "react-markdown";
+const API = "https://dfvoxbjo2c.execute-api.us-east-1.amazonaws.com/Prod/"
 
 type Post ={
   id: number;
@@ -19,9 +20,12 @@ const BlogPost: React.FC = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/post/${id}`)
+      .get(`${API}${id}`, {headers: {
+    'x-api-key': apiKey,
+    'Content-Type': 'application/json'
+  }})
       .then((response) => {
-        setPost(response.data);
+        setPost(response.data[0]);
       });
   }, [id]);
 
